@@ -1,0 +1,34 @@
+{
+	"case_study": "案例研究",
+	"roles": {
+		"business_strategist": "商業策略顧問",
+		"developer": "軟體工程師",
+		"ui_ux_designer": "UI/UX 設計師",
+		"product_owner": "產品負責人",
+		"tech_artist": "技術美術 (TA)",
+		"game_designer": "遊戲設計師",
+		"art_director": "美術總監",
+		"animator": "動畫設計師",
+		"compositor": "合成設計師"
+	},
+	"status": {
+		"complete": "已完成",
+		"progress": "開發中"
+	},
+	"context": {
+		"prod_ready": "正式上線",
+		"client_facing": "客戶專案",
+		"internal_rd": "內部研發",
+		"expe_proto": "實驗原型"
+	},
+	"attributes": {
+		"roles": "角色",
+		"status": "狀態",
+		"context": "專案類型",
+		"stack": "技術堆疊"
+	},
+	"sidebar": {
+		"table_content": "目錄",
+		"all_projects": "所有專案"
+	}
+}

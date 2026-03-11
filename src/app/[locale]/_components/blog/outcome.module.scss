@@ -1,0 +1,29 @@
+.outcome{
+
+    display:flex;
+    flex-direction: column;
+    gap:var(--size-space-extra-large-3);
+    
+}
+
+.mosaic{
+
+    position: absolute;
+    transform: translate3d(-1.3em, 0em, 0em);
+    
+    span{
+	background: var(--color-background-brand-subtle);
+    }
+}
+
+.item{
+    padding-right: var(--size-space-large);
+    display:flex;
+    flex-direction:row;
+    gap:var(--size-space-medium);
+    align-items: center;
+
+    .number{
+	position: relative;
+    }
+}

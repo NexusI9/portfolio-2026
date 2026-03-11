@@ -1,0 +1,48 @@
+@use "@styles/interaction" as interaction;
+@use "@styles/animation";
+
+.banner-anchor{
+
+    h3{
+	transition: padding, 250ms cubic-bezier(.18,.41,.41,.95);
+	padding-left:0px;
+	
+    }
+
+    @include interaction.hover{
+
+	h3{
+	    padding-left: 35px;
+	}
+	
+	.banner-anchor-mosaic{
+	    span{
+		opacity: 1;
+		transform: translate3d(0px, 0px, 0px);
+	    }
+	}
+    }
+    	
+
+    
+    &-mosaic{
+
+	& > div{
+	    span:first-of-type{
+		transition-delay: 105ms;
+	    }
+	    span:last-of-type{
+		transition-delay: 75ms;
+	    }
+	}
+	
+	span{
+	    transition: transform, 250ms cubic-bezier(.18,.41,.41,.95);
+	    opacity: 0;
+	    transform: translate3d(-30px, 0px, 0px);
+	}
+
+	position:absolute;
+    }
+    
+}

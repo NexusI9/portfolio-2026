@@ -1,0 +1,24 @@
+{
+	"categories": {
+		"digital": "Digital Product",
+		"game": "Game Development",
+		"film": "Film Production"
+	},
+	"header": {
+		"name": "Nassim El Khantour",
+		"subtitle": "Taiwan",
+		"resume": "Resume",
+		"contact": "Contact"
+	},
+	"footer": {
+		"credits": "Website Designed & Developed by Nassim El Khantour",
+		"contact": "Let's Get In Touch!"
+	},
+	"metadata": {
+		"title": "Nassim El Khantour - Design Engineer",
+		"description": "Design Engineer based in Taiwan with over 10 years of experience across numerous industries."
+	},
+	"glyphs": {
+		"separator_comma": ", "
+	}
+}

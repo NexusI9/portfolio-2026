@@ -1,0 +1,98 @@
+@use "@styles/var";
+@use "@styles/animation";
+@use "@styles/interaction" as interaction;
+@use "@components/corner-frame/animation" as cornerframe;
+
+.navbar{
+
+    position:relative;
+    background:var(--color-surface-highest);
+    box-shadow: var(--shadow-low);
+
+    border-radius: var(--size-radius-base);
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    
+    max-width: 684px;
+    width: 100vw;
+    
+    height: var(--size-height-input-large);
+
+    &:has(a:hover):not(:has(a.active:hover)){
+
+	a.active{
+	    //color: var(--color-text-on-light);
+	    .corner-frame{
+		height: 0%;
+		opacity: 0;
+		& > div{
+		    width:0%;
+		}
+	    }  
+	}
+	
+    }
+    
+
+    a{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before{
+	    pointer-events:none;
+	    content:'';
+	    position:absolute;
+	    width:0%;
+	    height:0%;
+	    opacity:100%;
+	    display:block;
+	    background: var(--color-background-brand-base);
+	    border-radius:var(--size-radius-small);
+	    transition: none;
+	}
+
+	@include interaction.hover{
+
+	   // color: var(--color-text-brand-base);
+	    
+	    .corner-frame{
+		height: 100%;
+		opacity:1;
+
+		& > div{
+		    width:100%;
+		}
+	    }
+	    
+	}
+	
+	&.active{
+	    color: var(--color-text-brand-base);
+
+	    &::before{
+		transition: width, height,opacity, 450ms cubic-bezier(.17,.67,.41,.91);
+		width:100%;
+		height:100%;
+		opacity:0%;
+	    }
+
+	    .corner-frame{
+		@include cornerframe.active;
+	    }
+
+	}
+	
+	.corner-frame{
+	    @include cornerframe.default;
+	}
+    }
+
+    
+}
+

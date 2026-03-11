@@ -1,0 +1,14 @@
+@use "@styles/var";
+@use "@styles/animation";
+
+@mixin default{
+	width: 70%;
+	opacity:0;
+	transition: opacity, width, var(--transition-base);
+}
+
+
+@mixin active{
+	width:100%;
+	opacity:1;
+}

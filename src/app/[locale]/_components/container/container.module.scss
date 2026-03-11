@@ -1,0 +1,32 @@
+@use "@styles/breakpoint" as breakpoint;
+@use "@styles/var";
+
+.container{
+
+    width:100vw;
+    margin: auto;
+    max-width: var(--size-width-desktop-full);
+    padding: 0 var(--size-margin-desktop);
+
+    @include breakpoint.tablet{
+	padding: 0 var(--size-margin-tablet);
+
+	&[data-type="FLUID"]{
+	    padding:0;
+	}
+    }
+
+
+    @include breakpoint.tablet{
+	padding: 0 var(--size-margin-mobile);
+
+	&[data-type="FLUID"]{
+	    padding:0;
+	}
+    }
+
+    &[data-type="FLUID"]{
+	padding:0;
+    }
+    
+}

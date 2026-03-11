@@ -1,0 +1,15 @@
+.status{
+
+
+    & > *{
+	flex-shrink: 0;
+    }
+
+
+    svg{
+	width: var(--size-icon-small);
+	height: auto;
+	aspect-ratio:1/1;
+    }
+    
+}

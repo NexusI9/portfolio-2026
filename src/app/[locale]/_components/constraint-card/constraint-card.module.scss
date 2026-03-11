@@ -1,0 +1,16 @@
+.constraint-card{
+    display:flex;
+    flex-direction:row;
+    gap:var(--size-space-large);
+    align-items: center;
+    background: var(--color-surface-highest);
+    padding: var(--size-space-medium) var(--size-space-extra-large);
+    border-bottom: solid var(--size-width-border-base) var(--color-border-brand-base);
+    box-shadow: var(--shadow-low);
+    min-width: 245px;
+    border-radius: var(--size-radius-small);
+
+    .number{
+	flex-shrink: 0;
+    }
+}

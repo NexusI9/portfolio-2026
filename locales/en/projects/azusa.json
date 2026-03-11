@@ -1,0 +1,48 @@
+{
+	"description": "World-building and video game project developed in Unity",
+	"intention": {
+		"headline": "Intention",
+		"body": "Starting as simple sketches, then concept art and drafted scripts in a notebook, Azusa is a long-term world-building project that never reached a final form. The following project explores a variant of Azusa through the lens of technical art and video game design."
+	},
+	"constraints": [
+		"Create a cohesive game design experience",
+		"Reuse concepts and designs from previous projects",
+		"Deliver visually appealing results within 3–6 months",
+		"Develop Unity prototypes",
+		"Design art direction for low-performance devices"
+	],
+	"exploration": {
+		"headline": "Exploration",
+		"creative_research": {
+			"headline": "Creative Research",
+			"early_concepts": {
+				"headline": "Early Concepts",
+				"body": "Inspired by Gibson’s Sprawl trilogy, Snow Crash, and cyberpunk anthology Mirrorshades, I began developing environments reflecting these worlds, adding original ideas to create a cohesive narrative. A recurring element that intrigued me was the enclave—spaces where people conduct alternative business, cultivate underground cultures, and form micro-civilizations with shared goals.",
+				"list": [
+					"The Raft in Snow Crash",
+					"Neuromancers’ space spindle Freeside",
+					"Mass Effect’s Citadel",
+					"Star Wars’ Cantinas"
+				]
+			},
+			"satellite": {
+				"headline": "Satellite Islands",
+				"body": "As an avid countryside and hiking enthusiast, I wanted players to experience exploration and vast landscapes. Since the initial citadel concept limited this, I designed a constellation of nomads and wild islands, awaiting settlers, tribes, and colonies."
+			},
+			"cartography": {
+				"headline": "Cartographies",
+				"body": "After defining key locations and environment types, I explored the ideological structures governing these worlds. I also created distinct visual contrasts between environments (sprawl vs. nomad islands) so players could intuitively map mechanics."
+			},
+			"character_design": {
+				"headline": "Character Design",
+				"body": "Due to the project constraint of reusing existing styles and assets, I revisited the design explored in Animal Chamber Apocalypse Beat. While technical and time limits had previously restricted character development, this project allowed me to create character designs balancing authenticity and practicality."
+			},
+			"ui": {
+				"headline": "User Interface",
+				"body": [
+					"For the UI, I combined futuristic and traditional elements, keeping it simple for low-performance devices. Inspirations ranged from cyber and archaic aesthetics to traditional interfaces like Mahjong and card games, balancing clarity with visually rich patterns."
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@use "@styles/utils" as utils;
+@use "@styles/var";
+
+.project-category{
+
+    aspect-ratio:16/7;
+    height:auto;
+
+    padding-top: var(--size-space-extra-large-6);
+    padding-bottom: var(--size-space-extra-large-6);
+
+    margin-top: var(--size-space-extra-large-6);
+    margin-bottom: var(--size-space-extra-large-6);
+
+}
+
+.mosaic{
+
+    position: absolute;
+    
+    span{
+	background: var(--color-background-brand-subtle);
+    }
+    
+}
+
+.project-wrapper{
+   // TODO OPTI: replace hardcoded widths by dynamic (var)
+    padding-left: utils.fluid-clamp(768px, 1440px, 0px, 228px);
+
+    & > a{
+	flex:1;
+    }
+
+}

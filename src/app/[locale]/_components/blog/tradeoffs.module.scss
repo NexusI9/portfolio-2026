@@ -1,0 +1,20 @@
+.tradeoffs{
+    padding-bottom: var(--size-space-extra-large-3);    
+    padding-left :var(--size-margin-blog);
+    padding-right: var(--size-margin-desktop);
+}
+
+.wrapper{
+    position: relative;    
+    &::after{
+	content: '';
+	position: absolute;
+	width:var(--size-margin-blog);
+	height:100%;
+	top:0;
+	left:0;
+	background: linear-gradient(90deg, var(--color-surface-higher) 80%, transparent);
+	display: block;
+    }
+    
+}

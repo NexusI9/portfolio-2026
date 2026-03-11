@@ -1,0 +1,12 @@
+.group{
+
+    display: flex;
+    gap: var(--size-space-large);
+    flex-direction: column;
+
+    &[data-direction=ROW]{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+}

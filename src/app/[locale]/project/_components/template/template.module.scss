@@ -1,0 +1,15 @@
+.container{
+        box-shadow: 0 25px 55px var(--color-surface-low);
+	position:relative;
+	background: var(--color-surface-higher);
+	margin-top: var(--project-banner-height);
+
+	display:flex;
+	flex-direction:row;
+
+
+	&[data-type=FLUID]{
+	    	padding-top: var(--size-space-extra-large-5);
+	    	padding-left: var(--size-margin-desktop);
+	}
+}

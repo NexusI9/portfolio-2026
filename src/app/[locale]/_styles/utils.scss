@@ -1,0 +1,10 @@
+@function fluid-clamp($min-vw, $max-vw, $min-value, $max-value) {
+  $slope: calc(($max-value - $min-value) / ($max-vw - $min-vw));
+  $intercept: $min-value - ($slope * $min-vw);
+
+  @return clamp(
+    #{$min-value},
+    calc(#{$intercept} + #{$slope * 100}vw),
+    #{$max-value}
+  );
+}

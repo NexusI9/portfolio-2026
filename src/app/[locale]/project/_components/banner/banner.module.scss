@@ -1,0 +1,18 @@
+@use "@styles/var";
+
+:root{
+    --project-banner-height:600px;
+}
+
+.banner{
+    
+    height: var(--project-banner-height);
+    padding-top: var(--size-space-extra-large-7);
+    display: grid;
+    grid-template-columns: auto 545px;
+    align-items: start;
+    gap: var(--size-space-extra-large-6);
+    position:fixed;
+    top:0;
+}
+

@@ -1,0 +1,89 @@
+{
+	"problem": {
+		"headline": "Problem Statement",
+		"body": "While working on freelance project I noticed I was repeatedly doing the same boilerplate for each project and was lacking of a centralized way to actually create, edit and export my design systems for productions. <br/> Many disparate plugins already offer simple basic color scheme generation but they seems very Design Centered and very few actually encompass broader and realistic production scope including: <br/> <ol><li>1. Global hue modification:  if clients ask to change color cause not satisfied.</li><li>2. Harmoniously Fine tuning font scale or color value</li><li>3. Exporting tokens under specific formats with specific configuration (color formats, namespace prefix…)</li><li>4. Generate a configurable Palette either for Brand Guideline or Handbook Document </li></ol>"
+	},
+	"constraints": [
+		"Need to complement existing Figma features and not replace or duplicate them.",
+		"Use typescript with Figma API",
+		"Design & Development time should be relatively fast (around 1 month) as need some features for an upcoming project, so require function segmentation and Agile approach",
+		"Keep in mind that the Figma API is still subject to changes with newly added functionalities so the Plugin Architecture and Data Structure shall remain flexible as to afford further potential changes in the API."
+	],
+	"uiResearch": [
+		"Since the plugin was going to be quite complex and have extensive functionalities, it felt necessary to give some importance to Accessibility and more “Descriptive UI” as to guide the user on the different actions that were offered to them.",
+		"Based on previous research, it’s been decided that offering two layout mode (minified extended) was quite convenient for either offering a broad overview to user or a more direct fine tuning mode. However since the plugin encompass both Fonts and Colors, it was necessary to ideate beforehand how both of those display mode would operate according to the object type while still being coherent and meaningful with one another.",
+		"A benchmark has also been done in order to assess existing working mechanics and interesting layout such as the expandable folder tree or curve based colors fine tuning.",
+		"Aside of the realtime synchronisation challenge, another point that also require particular attention was the styles creation. From previous research it’s been established that styles would be created within a “workbench”: a specific dialog to craft and auto generate the font sets of color swatches.",
+		"However since Figma plugin usually work within constrained space it was necessary to design specific components to offer flexibility and matching APIs calls while not overwhelming and complexify too much the experience, especially extra nested dialogs.",
+		"While most external systems library offered automatic generation with very few options aside of the primary color, the Google Design System library actually offered a quite extensive configuration, which drastically rose the complexity of the initial scope, fortunately the workbench sidebar was already designed to afford such dynamic content change, as a result the challenge was mostly within the component design rather than the behavioural logic.",
+		"The gradient generator (labelled as Interpolation) was another stage that require specific attention, in the sense that in usual UI (Adobe, Figma etc..), the gradient works by simply clicking within the gradient bar to add stops and then colors are automatically interpolated inbetween, however in a case of a design system, we need to decide how many interpolated colors we want between each stops. <br/ >On top of this, the overall module had to fit within the sidebar itself, as it would be technically out of scope to add buttons and extra component within the right side of the workbench."
+	],
+	"techResearch": [
+		"A key challenge was to establish the synchronization between the application state and the Figma API, offering the user live reload as to directly see how their actions impact on the design system:",
+		"Another challenge was to define ownership and behavior between the plugin and Figma between. Meaning how different objects act of the Figma Project including: "
+	],
+	"solution": [
+		"A dedicated <i>Transformer</i> has been used as a \"buffer domain\" to transpose and simplify Figma cumbersome and heavy objects retrieved from the API into the Plugin domain. However we decided to keep the same ID accross objects as reference point to be able to modify it back in Figma via the API.",
+		"The Radix UI library is coupled with custom widgets since the project had to be quickly delivered for the first phase but still requiring plugin custom modules. <br/> In Addition, using Figma as base color offers consistency with native product and light/dark mode management, while Radix UI allows fast setup and pre-existing interaction logic, and finally coupling those elements with plugin’s own resources allow to add a certain degree of flexibility.",
+		"Centralizes access to editable style categories and global token export for development workflows.",
+		"A folder-inspired structure that makes style hierarchies and relationships easy to understand.",
+		"Primary actions are available directly on each folder, while secondary and potentially destructive actions are grouped in a context menu.",
+		"Make real-time adjustments to essential font and color properties, avoiding cumbersome nested dialogs and unnecessary navigation.",
+		"Offers two complementary layouts: a compact mode for rapid overview and an expanded mode that surfaces detailed color and typography information.",
+		"Apply global or local transformation to font or color attributes such as brightness, contrast, hue or font family. Provide a curve editor for fine tweaking and harmonize the swatch.",
+		"Configurable export for CSS, SCSS, JSON, or tailwind with aliases mapping and format adjustment (rgb, hsl, hex…)",
+		"Customizable and exportable Palette ready for Handbook document or brand system guidelines with color contrast checker.",
+		"Create color swatch or font set based on either primary attributes such as saturation, hue, scale; or directly from standard Design System such as Google Material, Apple, Mantine, Tailwind."
+	],
+	"tradeoffs": [
+		{
+			"heading": "System-level Control vs Low Learning Curve",
+			"benefits": [
+				"Reduces long-term maintenance cost",
+				"Aligns with brand and design system needs"
+			],
+			"costs": [
+				"Requires onboarding and documentation",
+				"Slower first interaction compared to simple palette tools"
+			]
+		},
+		{
+			"heading": "Complementing Figma vs Owning the Source of Truth",
+			"benefits": [
+				"Easier structure decision following Figma styles",
+				"Lower risk of conflicts with native features"
+			],
+			"costs": [
+				"Must adapt to Figma’s constraints and API design",
+				"Requires careful ownership rules (set, map, strict)"
+			]
+		},
+		{
+			"heading": "Fast Delivery vs Ideal Architecture",
+			"benefits": [
+				"Necessary features shipped in time for an upcoming project",
+				"Clear separation of concerns"
+			],
+			"costs": [
+				"Deferred optimizations",
+				"Non-elegant architecture choice"
+			]
+		},
+		{
+			"heading": "Wider Scope vs Reduced Feature Depth",
+			"benefits": [
+				"Reduced context switching for teams",
+				"Consistent and centralized workflows across styles"
+			],
+			"costs": [
+				"Higher overall system complexity",
+				"Limits each features deeper development to maintain balance"
+			]
+		}
+	],
+	"outcomes": [
+		"Globally multiple received positive feedbacks for the plugins, still improving it to this day.",
+		"Such project made me realize the importance of using solid stack when developing such complex project, meaning using language with clear defined interfaces and static typing as JavaScript offers too many freedom when it comes to synthax and expression which may lead to inconsistency and confusion. Its high productivity value is beneficial for project that requires fast delivery but at the cost of an potential messy architecture.",
+		"A key axis of improvement for this project that needs to be refactored is the overall synchronization between the Client, the Store and the Server. I admit getting surprise by the complexity of having to add async request within the process and believe a clear and layout flow should be improved now that I have a better vision of the overall lifecycle."
+	]
+}

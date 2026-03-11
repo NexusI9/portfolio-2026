@@ -1,0 +1,34 @@
+{
+	"case_study": "Case Study",
+	"roles": {
+		"business_strategist": "Business Strategist",
+		"developer": "Developer",
+		"ui_ux_designer": "UI/UX Designer",
+		"product_owner": "Product Owner",
+		"tech_artist": "Technical Artist",
+		"game_designer": "Game Designer",
+		"art_director": "Art Director",
+		"animator": "Animator",
+		"compositor": "Compositor"
+	},
+	"status": {
+		"complete": "Completed",
+		"progress": "In Progress"
+	},
+	"context": {
+		"prod_ready": "Production Ready",
+		"client_facing": "Client Facing",
+		"internal_rd": "Internal R&D",
+		"expe_proto": "Experimental Prototype"
+	},
+	"attributes": {
+		"roles": "Roles",
+		"status": "Status",
+		"context": "Context",
+		"stack": "Stack"
+	},
+	"sidebar": {
+		"table_content": "Table of Content",
+		"all_projects": "All projects"
+	}
+}

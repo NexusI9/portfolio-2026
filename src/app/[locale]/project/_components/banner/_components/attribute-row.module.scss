@@ -1,0 +1,12 @@
+@use "@styles/var";
+
+.attribute-row{
+    display:grid;
+    grid-template-columns: 100px auto;
+    gap: var(--size-space-extra-large-3);
+
+    & > p:first-child{
+	padding-top:var(--size-space-extra-small);
+    }
+    
+}

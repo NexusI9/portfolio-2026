@@ -1,0 +1,7 @@
+@mixin zh {
+    html{
+	&[lang=zh-TW]{
+   	    @content;	
+	}
+    }
+}

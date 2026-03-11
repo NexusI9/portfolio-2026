@@ -1,0 +1,40 @@
+{
+	"headlines": {
+		"quotes": [
+			"我们共同推动了",
+			"这些专案"
+		]
+	},
+	"quotes": [
+		{
+			"quote": "一位極具才華且多面向的創意工作者。他始終展現出<mark>積極主動解決問題的態度</mark>。",
+			"author": "Louhann M.",
+			"position": "Grazia 雜誌記者與文案撰寫",
+			"location": "法國，巴黎"
+		},
+		{
+			"quote": "我強烈建議在任何科技專案中與他合作。<br /><mark>真的是個高手！</mark>",
+			"author": "Paul-André C.",
+			"position": "Celsius Communication 商務發展與副理",
+			"location": "加拿大，蒙特婁"
+		},
+		{
+			"quote": "他的創作不僅美觀迷人，同時也展現出<mark>對細節的高度重視</mark>與視覺一致性。",
+			"author": "Matteo M.",
+			"position": "SEM 活動專家與專案經理",
+			"location": "法國，馬賽"
+		},
+		{
+			"quote": "與 Nassim 合作，我能找到<mark>設計與功能的完美平衡</mark>。他也<mark>非常擅長指導與合作</mark>，與設計團隊其他成員共同推進專案。",
+			"author": "Alex B.",
+			"position": "MTLVibe 執行長暨行銷總監",
+			"location": "加拿大，蒙特婁"
+		},
+		{
+			"quote": "除了他<mark>卓越的專業技能</mark>，Nassim 也是一位<mark>團隊合作者</mark>，他對工作的熱情帶動了強烈的<mark>集體精神</mark>。",
+			"author": "Nader B.M.",
+			"position": "Redbox Media 聯合創辦人暨數位策略師",
+			"location": "加拿大，蒙特婁"
+		}
+	]
+}

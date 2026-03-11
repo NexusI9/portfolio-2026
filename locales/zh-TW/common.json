@@ -1,0 +1,24 @@
+{
+	"categories": {
+		"digital": "數位產品",
+		"game": "遊戲開發",
+		"film": "影視製作"
+	},
+	"header": {
+		"name": "安俊凱 Nassim El Khantour",
+		"subtitle": "台灣",
+		"resume": "履歷",
+		"contact": "聯絡"
+	},
+	"footer": {
+		"credits": "網站設計與開發：Nassim El Khantour",
+		"contact": "让我们联络吧！"
+	},
+	"metadata": {
+		"title": "Nassim El Khantour 安俊凱 - 設計工程師",
+		"description": "常駐台灣的設計工程師，擁有超過十年的跨產業經驗。"
+	},
+	"glyphs": {
+		"separator_comma": "，"
+	}
+}
