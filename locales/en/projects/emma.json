@@ -108,26 +108,38 @@
 		"resource_manager": {
 			"headline": "Resource Manager Model",
 			"body": "A resource manager coupled with an ID registry is used to handle resource lifecycles, from creation to destruction.",
-			"benefits": [
-				"Easier to track resources management",
-				"Allow O(1) resource fetching"
-			],
-			"limits": [
-				"Sparse spatial locality if use linked list for dynamic capacity ",
-				"Slight overhead instead of using pointers"
-			]
+			"benefits": {
+				"heading": "Benefits",
+				"items": [
+					"Easier to track resources management",
+					"Allow O(1) resource fetching"
+				]
+			},
+			"limits": {
+				"heading": "Limits",
+				"items": [
+					"Sparse spatial locality if use linked list for dynamic capacity ",
+					"Slight overhead instead of using pointers"
+				]
+			}
 		},
 		"state_array": {
 			"headline": "State-Based Array",
 			"body": "A cache-friendly, state-based array approach was implemented to process state-shared objects contiguously.",
-			"benefits": [
-				"Greater data locality and cache hits",
-				"Prevent last minute decision"
-			],
-			"limits": [
-				"Less intuitive that Enum or boolean based state",
-				"More complex state management"
-			]
+			"benefits": {
+				"heading": "Benefits",
+				"items": [
+					"Greater data locality and cache hits",
+					"Prevent last minute decision"
+				]
+			},
+			"limits": {
+				"heading": "Limits",
+				"items": [
+					"Less intuitive that Enum or boolean based state",
+					"More complex state management"
+				]
+			}
 		},
 		"semantics": {
 			"headline": "Semantics",

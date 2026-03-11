@@ -4,7 +4,7 @@ import styles from "./tag.module.scss";
 import { catClass } from "../../_lib/utils";
 
 interface ITag extends ComponentPropsWithoutRef<"div"> {
-	role: IComponentRole,
+	role: IComponentRole
 }
 
 export default function Tag({ role, children, className }: ITag) {

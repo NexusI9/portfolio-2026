@@ -6,6 +6,7 @@ import TradeOffs from "./tradeoffs";
 import Constraints from "./constraints";
 import Heading from "./heading";
 import Group from "./group";
+import TagList from "./taglist";
 
 export const Blog = {
 	TradeOffs,
@@ -16,4 +17,5 @@ export const Blog = {
 	Constraints,
 	Heading,
 	Group,
+	TagList,
 };

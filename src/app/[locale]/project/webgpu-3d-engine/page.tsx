@@ -161,36 +161,139 @@ export default function WebgpuEngine() {
 			</Blog.Group>
 
 			<Blog.Group>
-				<Blog.Heading role="H4">{p.solution.systems.headline}</Blog.Heading>
-				<Blog.Paragraph>{p.solution.systems.body}</Blog.Paragraph>
-
-				<Gallery.AutoLayout rows={[[
-					imPath(pName, "core-system-segmentation"),
-				]]} />
-			</Blog.Group>
-
-			<Blog.Group direction="ROW">
+				<Blog.Heading role="H4">{p.solution.segmentation.headline}</Blog.Heading>
 				<Blog.Group>
-					<Blog.Heading role="H4">{p.solution.core_split.headline}</Blog.Heading>
-					<Blog.Paragraph>{p.solution.core_split.body}</Blog.Paragraph>
+					<Blog.Heading role="H5">{p.solution.segmentation.systems.headline}</Blog.Heading>
+					<Blog.Paragraph>{p.solution.segmentation.systems.body}</Blog.Paragraph>
+
+					<Gallery.AutoLayout rows={[[
+						imPath(pName, "core-system-segmentation"),
+					]]} />
 				</Blog.Group>
 
-				<Gallery.AutoLayout rows={[[
-					imPath(pName, "core-gui-segmentation"),
-				]]} />
-			</Blog.Group>
+				<Blog.Group direction="ROW">
+					<Blog.Group>
+						<Blog.Heading role="H5">{p.solution.segmentation.core_split.headline}</Blog.Heading>
+						<Blog.Paragraph>{p.solution.segmentation.core_split.body}</Blog.Paragraph>
+					</Blog.Group>
 
-			<Blog.Group direction="ROW">
-				<Blog.Group>
-					<Blog.Heading role="H4">{p.solution.core_split.headline}</Blog.Heading>
-					<Blog.Paragraph>{p.solution.core_split.body}</Blog.Paragraph>
+					<Gallery.AutoLayout rows={[[
+						imPath(pName, "core-gui-segmentation"),
+					]]} />
 				</Blog.Group>
-
-				<Gallery.AutoLayout rows={[[
-					imPath(pName, "core-gui-segmentation"),
-				]]} />
 			</Blog.Group>
-		</Blog.Section>
+
+			<Blog.Group>
+
+				<Gallery.Wrapper>
+
+					<Blog.Heading role="H4">{p.solution.batch.headline}</Blog.Heading>
+
+					<Blog.Group direction="ROW">
+						<Blog.Group>
+							<Blog.Heading role="H5">{p.solution.batch.hash.headline}</Blog.Heading>
+							<Blog.Paragraph>{p.solution.batch.hash.body}</Blog.Paragraph>
+						</Blog.Group>
+						<Gallery.Row>
+							<Gallery.Image src={imPath(pName, "batch-hash-structure")} />
+						</Gallery.Row>
+					</Blog.Group>
+
+					<Blog.Heading role="H5">{p.solution.batch.organize.headline}</Blog.Heading>
+					<Blog.Paragraph>{p.solution.batch.organize.body}</Blog.Paragraph>
+
+					<Gallery.Row>
+						<Gallery.Image src={imPath(pName, "renderer")} />
+						<Gallery.Image src={imPath(pName, "batch-perf")} />
+					</Gallery.Row>
+
+				</Gallery.Wrapper>
+			</Blog.Group>
+
+			<Blog.Group>
+
+				<Gallery.Wrapper>
+
+					<Blog.Heading role="H4">{p.solution.cold_hot.headline}</Blog.Heading>
+
+					<Blog.Group direction="ROW">
+						<Blog.Group>
+							<Blog.Heading role="H5">{p.solution.cold_hot.semantic.headline}</Blog.Heading>
+							<Blog.Paragraph>{p.solution.cold_hot.semantic.body}</Blog.Paragraph>
+						</Blog.Group>
+						<Gallery.Row>
+							<Gallery.Image src={imPath(pName, "hot-cold-path-semantic")} />
+						</Gallery.Row>
+					</Blog.Group>
+
+					<Blog.Group direction="ROW">
+						<Blog.Group>
+							<Blog.Heading role="H5">{p.solution.cold_hot.process.headline}</Blog.Heading>
+							<Blog.Paragraph>{p.solution.cold_hot.process.body}</Blog.Paragraph>
+						</Blog.Group>
+						<Gallery.Row>
+							<Gallery.Image src={imPath(pName, "hot-cold-path")} />
+						</Gallery.Row>
+					</Blog.Group>
+
+				</Gallery.Wrapper>
+
+			</Blog.Group>
+
+			<Blog.Group>
+				<Blog.Heading role="H4">{p.solution.resource_manager.headline}</Blog.Heading>
+				<Blog.Paragraph>{p.solution.resource_manager.body}</Blog.Paragraph>
+
+				<Gallery.AutoLayout rows={[[imPath(pName, "core-rem-registry")]]} />
+			</Blog.Group >
+
+			<Blog.Group>
+				<Blog.Heading role="H4">{p.solution.dynamic_rendering.headline}</Blog.Heading>
+				<Blog.Paragraph>{p.solution.dynamic_rendering.body}</Blog.Paragraph>
+
+				<Gallery.AutoLayout rows={[
+					[imPath(pName, "core-dynamic-rendering")],
+					[
+						imPath(pName, "core-dynamic-rendering-route"),
+						imPath(pName, "core-dynamic-rendering-topo"),
+						imPath(pName, "core-dynamic-rendering-anchor")
+					]
+				]} />
+
+			</Blog.Group >
+
+			<Blog.Group>
+				<Blog.Heading role="H4">{p.solution.ui_presentation.headline}</Blog.Heading>
+				<Gallery.AutoLayout rows={[
+					[
+						imPath(pName, "UI-postfx"),
+					],
+					[
+						imPath(pName, "UI-editor"),
+						imPath(pName, "UI-profiling")
+					],
+					[
+						imPath(pName, "UI-shadowmap"),
+						imPath(pName, "UI-dynamic-rendering"),
+					],
+					[
+						imPath(pName, "UI-rendering"),
+					],
+					[
+						imPath(pName, "UI-registry"),
+						imPath(pName, "UI-log"),
+					],
+					[
+						imPath(pName, "UI-treeview"),
+						imPath(pName, "UI-icons"),
+					],
+					[
+						imPath(pName, "UI-gizmo"),
+					]
+				]} />
+			</Blog.Group>
+		</Blog.Section >
+
 
 		<Blog.TradeOffs items={p.tradeoffs.map(t => ({ ...t, heading: <TradeOffHeader items={t.heading} /> }))} />
 

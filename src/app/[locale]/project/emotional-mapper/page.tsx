@@ -8,6 +8,8 @@ import { Gallery } from "../../_components/gallery/gallery";
 import { imPath } from "../_lib/helper";
 import { List } from "../../_components/list/list";
 import TradeOffHeader from "../_components/tradeoff-header/tradeoff-header";
+import Tag from "../../_components/tag/tag";
+import { Text } from "../../_components/text/text";
 
 export default function EmotionalMapper() {
 
@@ -219,16 +221,42 @@ export default function EmotionalMapper() {
 					<Blog.Group>
 						<Blog.Heading role="H5">{p.software_architecture.resource_manager.headline}</Blog.Heading>
 						<Blog.Paragraph>{p.software_architecture.resource_manager.body}</Blog.Paragraph>
+						<Blog.TagList
+							role="SUCCESS"
+							label={p.software_architecture.resource_manager.benefits.heading}
+							items={p.software_architecture.resource_manager.benefits.items}
+						/>
+
+						<Blog.TagList
+							role="DANGER"
+							label={p.software_architecture.resource_manager.limits.heading}
+							items={p.software_architecture.resource_manager.limits.items}
+						/>
+
 					</Blog.Group>
 					<Gallery.AutoLayout rows={[[imPath(pName, "software-rem")]]} />
 				</Blog.Group>
 
 				<Blog.Group direction="ROW">
-					<Gallery.AutoLayout rows={[[imPath(pName, "software-state-based-array")]]} />
 					<Blog.Group>
 						<Blog.Heading role="H5">{p.software_architecture.state_array.headline}</Blog.Heading>
 						<Blog.Paragraph>{p.software_architecture.state_array.body}</Blog.Paragraph>
+
+						<Blog.TagList
+							role="SUCCESS"
+							label={p.software_architecture.state_array.benefits.heading}
+							items={p.software_architecture.state_array.benefits.items}
+						/>
+
+						<Blog.TagList
+							role="DANGER"
+							label={p.software_architecture.state_array.limits.heading}
+							items={p.software_architecture.state_array.limits.items}
+						/>
+
 					</Blog.Group>
+
+					<Gallery.AutoLayout rows={[[imPath(pName, "software-state-based-array")]]} />
 
 				</Blog.Group>
 			</Blog.Group>

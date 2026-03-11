@@ -60,21 +60,38 @@
 			"headline": "UBO Queuing",
 			"body": "For performance, each scene uses a dedicated uniform buffer combining mesh model matrices, light data, and view/projection information."
 		},
-		"systems": {
-			"headline": "Data/Behavior Segmentation",
-			"body": "To prevent circular references, 'god objects,' and maintain structure, I designed systems as cross-domain crossroads. This preserves data integrity and centralizes complex or risky operations."
-		},
-		"core_split": {
-			"headline": "Core/Editor Segmentation",
-			"body": "The engine separates its core from the editor: the core uses C, while the editor relies on C++ UI libraries. This approach ensures better performance control."
+		"segmentation": {
+			"headline": "Domains Segmentation",
+			"systems": {
+				"headline": "Data & Behavior",
+				"body": "To prevent circular references, 'god objects,' and maintain structure, I designed systems as cross-domain crossroads. This preserves data integrity and centralizes complex or risky operations."
+			},
+			"core_split": {
+				"headline": "Core & Editor",
+				"body": "The engine separates its core from the editor: the core uses C, while the editor relies on C++ UI libraries. This approach ensures better performance control."
+			}
 		},
 		"batch": {
 			"headline": "Batch Pipeline Rendering",
-			"body": "The engine now organizes objects by pipelines to batch render them, significantly improving runtime performance."
+			"hash": {
+				"headline": "Pipeline Hashing",
+				"body": "The engine hashes predefined pipelines based on their render attributes and role-specific flags, such as shadow mapping or reflections. This system makes it easier to retrieve pipelines by render state or execution order."
+			},
+			"organize": {
+				"headline": "Object Sorting",
+				"body": "The renderer then sort each scene objects by pipelines to batch render them. Which proved to significantly improve the runtime performance."
+			}
 		},
 		"cold_hot": {
 			"headline": "Branch-Free Hot Loop Strategy",
-			"body": "To improve performance and avoid branching in hot loops, I adopted a cold/hot path pattern. Cold functions (init, loading) handle conditions and configuration, then register objects into dedicated channels so they can be processed contiguously during hot-path execution."
+			"semantic": {
+				"headline": "Functions semantic",
+				"body": "To improve performance and avoid branching in hot loops, I adopted a clear cold/hot path function semantic where naming reflects call frequency. Initialization functions are designed to run only a few times and may include more conditional logic, while update and draw functions are optimized for linear, array-based processing with minimal last-minute decisions."
+			},
+			"process": {
+				"headline": "Register Flow",
+				"body": "To ensure a smooth transition from initialization to continuous processing, I used a register pattern. Cold functions (init, loading) handle conditions and configuration, then register objects into dedicated channels so they can be processed contiguously during hot-path execution."
+			}
 		},
 		"resource_manager": {
 			"headline": "Resource Manager",

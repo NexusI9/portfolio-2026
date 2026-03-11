@@ -5,7 +5,7 @@ import { ComponentPropsWithoutRef, RefObject, useRef } from "react";
 import ProjectCategory from "./project-category";
 import ViewCatcher from "@components/view-catcher/view-catcher";
 import { useNavigation } from "@/app/[locale]/_context/navigation/navigation";
-import { PROJECT_DESCRIPTOR_ANIMAL, PROJECT_DESCRIPTOR_EMOTIONAL_MAPPER, PROJECT_DESCRIPTOR_STYLE_STUDIO, PROJECT_DESCRIPTOR_WEBGPU } from "@/app/[locale]/project/_lib/descriptors";
+import { PROJECT_DESCRIPTOR_ANIMAL, PROJECT_DESCRIPTOR_AZUSA, PROJECT_DESCRIPTOR_EMOTIONAL_MAPPER, PROJECT_DESCRIPTOR_STYLE_STUDIO, PROJECT_DESCRIPTOR_WEBGPU } from "@/app/[locale]/project/_lib/descriptors";
 import { mapFromDescriptor } from "./helper";
 import { useDictionary } from "@/i18n/Context";
 import { useParams } from "next/navigation";
@@ -31,7 +31,7 @@ export default function ProjectCategoryWrapper() {
 			headline: PROJECT_CATEGORIES_ANCHORS(dico)[1].label,
 			id: PROJECT_CATEGORIES_ANCHORS(dico)[1].anchor,
 			projects: [
-				mapFromDescriptor(PROJECT_DESCRIPTOR_EMOTIONAL_MAPPER(dico), locale as string),
+				mapFromDescriptor(PROJECT_DESCRIPTOR_AZUSA(dico), locale as string),
 				mapFromDescriptor(PROJECT_DESCRIPTOR_WEBGPU(dico), locale as string),
 			]
 		},

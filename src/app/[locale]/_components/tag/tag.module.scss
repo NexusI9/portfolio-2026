@@ -1,13 +1,16 @@
 .tag{
 
     border-radius: var(--size-radius-small);
-    padding: var(--size-space-small) var(--size-space-large)  var(--size-space-small)  var(--size-space-medium);
+    padding: var(--size-space-small) var(--size-space-large)  var(--size-space-small)  var(--size-space-large);
     display:flex;
     flex-direction:row;
     gap: var(--size-space-small);
     align-items: center;
     width: fit-content;
 
+    &:has(svg:first-child){
+	padding-left: var(--size-space-medium);
+    }
     border-width: var(--size-width-border-base);
     
     &[data-role=INFORMATION]{
@@ -20,5 +23,11 @@
 	border-color: var(--color-border-success-base);
 	background-color: var(--color-background-success-subtle);
 	color: var(--color-text-success-strong);
+    }
+
+    &[data-role=DANGER]{
+	border-color: var(--color-border-danger-base);
+	background-color: var(--color-background-danger-subtle);
+	color: var(--color-text-danger-strong);
     }
 }

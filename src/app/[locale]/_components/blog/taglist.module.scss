@@ -1,0 +1,13 @@
+.tag{
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+}
+
+
+.taglist{
+
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    gap: var(--size-space-extra-large);
+}
