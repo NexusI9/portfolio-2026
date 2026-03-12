@@ -175,6 +175,8 @@ export default function AnimalChamberApocalypseBeat() {
 				<Blog.Heading role="H4">{p.production.render.headline}</Blog.Heading>
 				<Blog.Paragraph>{p.production.render.body}</Blog.Paragraph>
 
+				<div style={{ padding: "41.28% 0 0 0", position: "relative" }}><iframe src="https://player.vimeo.com/video/502583843?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} title="Philip Pentacle - ACAB (Animal Chamber Apocalypse Beat )"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 				<Gallery.AutoLayout rows={[
 					[
 						imPath(pName, "render-01"),

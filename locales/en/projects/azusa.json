@@ -17,7 +17,7 @@
 			"headline": "Creative Research",
 			"early_concepts": {
 				"headline": "Early Concepts",
-				"body": "Inspired by Gibson’s Sprawl trilogy, Snow Crash, and cyberpunk anthology Mirrorshades, I began developing environments reflecting these worlds, adding original ideas to create a cohesive narrative. A recurring element that intrigued me was the enclave—spaces where people conduct alternative business, cultivate underground cultures, and form micro-civilizations with shared goals.",
+				"body": "Inspired by Gibson’s Sprawl trilogy, Snow Crash, and cyberpunk anthology Mirrorshades, I began developing environments reflecting these worlds, adding original ideas to create a cohesive narrative. A recurring element that intrigued me was the enclave, or spaces where people conduct alternative business, cultivate underground cultures, and form micro-civilizations with shared goals.",
 				"list": [
 					"The Raft in Snow Crash",
 					"Neuromancers’ space spindle Freeside",
@@ -37,10 +37,17 @@
 				"headline": "Character Design",
 				"body": "Due to the project constraint of reusing existing styles and assets, I revisited the design explored in Animal Chamber Apocalypse Beat. While technical and time limits had previously restricted character development, this project allowed me to create character designs balancing authenticity and practicality."
 			},
+			"iconography": {
+				"headline": "Iconography",
+				"body": [
+					"Once I had a broad idea of the key mechanics, I began designing icons to match them. In terms of style, since a central theme was space tribes and island exploration, I aimed for shapes and concepts rooted in symbolism, archaism, and tribal aesthetics.",
+					"Because icons are often tied to deeper ideas and narratives, creating them early on pushed me to think more carefully about the underlying structures. This process helped clarify several mechanics as well as aspects of the world’s organization."
+				]
+			},
 			"ui": {
 				"headline": "User Interface",
 				"body": [
-					"For the UI, I combined futuristic and traditional elements, keeping it simple for low-performance devices. Inspirations ranged from cyber and archaic aesthetics to traditional interfaces like Mahjong and card games, balancing clarity with visually rich patterns."
+					"For the UI, I aimed for a sci-fi look that still felt friendly and stylized, while keeping it simple enough for low-performance devices. The overall direction combines futuristic elements with playful visual patterns inspired by interfaces like Mahjong pieces or card games."
 				]
 			}
 		}

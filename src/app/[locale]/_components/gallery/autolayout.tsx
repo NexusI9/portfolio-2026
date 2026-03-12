@@ -6,11 +6,12 @@ import Wrapper from "./wrapper";
 
 interface IAutoLayout {
 	rows: string[][];
+	noWrapper?: boolean;
 }
 
-export default function AutoLayout({ rows }: IAutoLayout) {
-	return (
-		<Wrapper>
+export default function AutoLayout({ rows, noWrapper }: IAutoLayout) {
+	const content = (
+		<>
 			{rows.map((row, rowIndex) => (
 				<Row key={rowIndex}>
 					{row.map((src, imgIndex) => (
@@ -18,6 +19,10 @@ export default function AutoLayout({ rows }: IAutoLayout) {
 					))}
 				</Row>
 			))}
-		</Wrapper>
+		</>
 	);
+
+	if (noWrapper) return content;
+
+	return <Wrapper>{content}</Wrapper>;
 }
