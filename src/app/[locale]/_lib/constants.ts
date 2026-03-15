@@ -24,3 +24,5 @@ export const PROJECT_CATEGORIES_ANCHORS: (dico: Dictionary) => Array<IProjectCat
 export const THUMBNAIL_WIDTH = 500;
 export const THUMBNAIL_HEIGHT = 437;
 export const THUMBNAIL_WIDTH_WIDE = 1120;
+export const MOBILE_WIDTH = 360;
+export const TABLET_WIDTH = 768;

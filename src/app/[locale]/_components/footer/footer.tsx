@@ -2,7 +2,7 @@
 
 import Container from "@components/container/container";
 import styles from "./footer.module.scss";
-import { Text } from "../text/text";
+import { Text, TextBase } from "../text/text";
 import Portrait from "./_components/portrait";
 import DecoFrame from "../deco-frame/deco-frame";
 import Mosaic from "../mosaic/mosaic";
@@ -30,7 +30,7 @@ export default function Footer() {
 					</Portrait>
 
 					<hgroup className="flex flex-col gap-(--size-space-extra-large-2)">
-						<Text.Display>{dico.common.footer.contact}</Text.Display>
+					  <TextBase role="H2" style="DISPLAY" className={styles.display}>{dico.common.footer.contact}</TextBase>
 						<a href="mailto:nassim.elkhantour@gmail.com" className="flex flex-row gap-(--size-space-large) items-center">
 							<Arrow className={styles.arrow} />
 							<div className={styles.email}>
@@ -41,7 +41,7 @@ export default function Footer() {
 					</hgroup>
 				</div>
 
-				<div className="flex flex-row w-full justify-between items-center text-(--color-text-subtle-on-light)">
+			  <div className={styles.credits}>
 					<Text.Footnote>{dico.common.footer.credits}</Text.Footnote>
 					<Text.Footnote>© Nassim El Khantour {new Date().getFullYear()}</Text.Footnote>
 				</div>

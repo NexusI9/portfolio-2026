@@ -2,6 +2,8 @@
 @use "@styles/animation";
 @use "@styles/interaction" as interaction;
 @use "@components/corner-frame/animation" as cornerframe;
+@use "@styles/responsive" as responsive;
+@use "@styles/utils" as utils;
 
 .navbar{
 
@@ -14,11 +16,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
-    
-    max-width: 684px;
-    width: 100vw;
-    
+
+    $baseWidth: 684px;
+    width: utils.fluid-clamp( responsive.$smallscreen, responsive.$widescreen, 545px, $baseWidth);
     height: var(--size-height-input-large);
+
+    @include responsive.tablet{
+	display:none;
+    }
 
     &:has(a:hover):not(:has(a.active:hover)){
 
@@ -93,6 +98,10 @@
 	}
     }
 
+    @media (max-width: 1160px) {
+	margin-top: var(--size-space-extra-large-5);
+	width: $baseWidth;
+    }
     
 }
 

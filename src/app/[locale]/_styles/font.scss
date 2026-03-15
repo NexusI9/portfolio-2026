@@ -1,5 +1,6 @@
 @use "./var";
 @use "./locale" as locale;
+@use "@styles/responsive" as responsive;
 
 @include locale.zh{
     h1, h2, h3, h4, h5, h6, p, i{
@@ -39,45 +40,83 @@ h1, h2, h3, h4, h5, h6, p{
 	letter-spacing: -0.4px;
 	line-height: 116px;
 	font-style: italic;
+
+	@include responsive.mobile{
+	    font-size: 4.76rem;
+	    line-height: 80px;
+	}
+
+	@include responsive.tablet{
+            font-size: 4.16rem;
+            line-height: 76px;
+	}
     }
 }
 
-h1{
-
+h1, .h1{
     letter-spacing: var(--font-letter-spacing-heading-1);
     font-size: var(--font-size-heading-1);
     font-weight: var(--font-weight-light);
     line-height: var(--font-line-height-heading-1);
+
+    @include responsive.mobile{
+        font-size: var(--font-size-heading-1-mb);
+        line-height: var(--font-line-height-heading-1-mb);
+    }
 }
 
-h2{
+h2, .h2{
     letter-spacing: var(--font-letter-spacing-heading-2);
     font-size: var(--font-size-heading-2);
     line-height: var(--font-line-height-heading-2);
+
+    @include responsive.mobile{
+        font-size: var(--font-size-heading-2-mb);
+        line-height: var(--font-line-height-heading-2-mb);
+    }
 }
 
-h3{
+h3, .h3{
     letter-spacing: var(--font-letter-spacing-heading-3);
     font-size: var(--font-size-heading-3);
     font-weight: var(--font-weight-normal);
+
+    @include responsive.mobile{
+        font-size: var(--font-size-heading-3-mb);
+        line-height: var(--font-line-height-heading-3-mb);
+    }
 }
 
-h4{
+h4, .h4{
     letter-spacing: var(--font-letter-spacing-heading-4);
     font-size: var(--font-size-heading-4);
+
+    @include responsive.mobile{
+        font-size: var(--font-size-heading-4-mb);
+        line-height: var(--font-line-height-heading-4-mb);
+    }
 }
 
-h5{
+h5, .h5{
     letter-spacing: var(--font-letter-spacing-heading-5);
     font-size: var(--font-size-heading-5);
     font-weight: var(--font-weight-medium);
+
+    @include responsive.mobile{
+        font-size: var(--font-size-heading-5-mb);
+        line-height: var(--font-line-height-heading-5-mb);
+    }
 }
 
-h6{
+h6, .h6{
     letter-spacing: var(--font-letter-spacing-heading-6);
     font-size: var(--font-size-heading-6);
-}
 
+    @include responsive.mobile{
+        font-size: var(--font-size-heading-6-mb);
+        line-height: var(--font-line-height-heading-6-mb);
+    }
+}
 
 p{
     font-size: var(--font-size-body-1);
@@ -92,6 +131,11 @@ p{
     &.caption{
 	font-size: var(--font-size-caption);
 	letter-spacing: var(--font-letter-spacing-caption);
+    }
+
+    &.footnote{
+	font-size: var(--font-size-footnote);
+	letter-spacing: var(--font-letter-spacing-footnote);
     }
 
     &.overline{

@@ -1,11 +1,30 @@
+@use "@styles/utils" as utils;
+@use "@styles/var";
+@use "@styles/responsive" as responsive;
+
+
 .video{
 
-    max-width:778px;
-    aspect-ratio:4/3;
+    // TODO fix hard coded width
+    --ratio:4/3;
+    
+    max-width: utils.fluid-clamp(responsive.$smallscreen, responsive.$widescreen, 500px, 728px);
+    aspect-ratio: var(--ratio);
 
     video{
 	height:100%;
     }
 
+    @include responsive.smallscreen{
+	max-width: none;
+	--ratio: auto;
+    }
+
+    
+    @include responsive.tablet{
+	max-width: none;
+	--ratio: auto;
+    }
+    
     
 }

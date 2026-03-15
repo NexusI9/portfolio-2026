@@ -45,7 +45,7 @@ const Portrait = ({ children, className }: ComponentPropsWithoutRef<"div">) => {
 	}, [render]);
 
 
-  return (<div className={catClass([styles.portrait, className])} ref={container}>
+  return (<div className={catClass([className, styles.portrait])} ref={container}>
 	    {children}
 	  </div>);
 }

@@ -37,7 +37,7 @@ export default function ProjectCategory({ headline, projects, id }: IProjectCate
 					<Text.Display className="relative">{headline}</Text.Display>
 				</hgroup>
 
-				<div className={`${styles["project-wrapper"]} flex flex-row gap-(--size-space-extra-large-2) w-full justify-end h-[437px]`}>
+				<div className={styles["project-wrapper"]}>
 					{projects.map((props) => <ProjectCard key={props.thumbnail} {...props} />)}
 				</div>
 

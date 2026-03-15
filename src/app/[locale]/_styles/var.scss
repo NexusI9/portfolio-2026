@@ -220,11 +220,36 @@
 
 --font-family-email-body: Arial;
 
+
+/* MOBILE TYPOGRAPHY */
+
+--font-size-heading-1-mb: 3.75em; 
+--font-line-height-heading-1-mb: 1.1em;
+
+--font-size-heading-2-mb: 3em;  
+--font-line-height-heading-2-mb: 1.2em;
+
+--font-size-heading-3-mb: 2.13em; 
+--font-line-height-heading-3-mb: 1.25em;
+
+--font-size-heading-4-mb: 1.75em;
+--font-line-height-heading-4-mb: 1.3em;
+
+--font-size-heading-5-mb: 1.38em;
+--font-line-height-heading-5-mb: 1.35em;
+
+--font-size-heading-6-mb: 1.13em;
+--font-line-height-heading-6-mb: 1.4em;
+
+
 /* Other variables*/
 --size-margin-tablet: 52px;
 
 --size-width-desktop-full: 1440px;
 --size-width-desktop-container: 1348px;
+
+--size-width-desktop-small-full: 1024px;
+
 --size-width-tablet-full: 768px;
 --size-width-tablet-container: 664px;
 --size-width-mobile-full: 360px;

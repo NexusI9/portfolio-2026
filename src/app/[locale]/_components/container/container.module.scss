@@ -1,4 +1,4 @@
-@use "@styles/breakpoint" as breakpoint;
+@use "@styles/responsive" as responsive;
 @use "@styles/var";
 
 .container{
@@ -8,7 +8,7 @@
     max-width: var(--size-width-desktop-full);
     padding: 0 var(--size-margin-desktop);
 
-    @include breakpoint.tablet{
+    @include responsive.tablet{
 	padding: 0 var(--size-margin-tablet);
 
 	&[data-type="FLUID"]{
@@ -17,7 +17,7 @@
     }
 
 
-    @include breakpoint.tablet{
+    @include responsive.tablet{
 	padding: 0 var(--size-margin-mobile);
 
 	&[data-type="FLUID"]{

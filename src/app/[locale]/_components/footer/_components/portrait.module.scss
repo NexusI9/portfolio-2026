@@ -1,6 +1,14 @@
+@use "@styles/responsive" as responsive;
+
 .portrait{
     aspect-ratio: 76/91;
     height: auto;
     width: 100%;
     display: block;
+    overflow: hidden;
+
+    @include responsive.tablet{
+	width:100%;
+	max-width:300px;
+    }
 }

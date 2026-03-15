@@ -12,7 +12,7 @@ export default function Intro() {
 	const dico = useDictionary();
 
 	return (<Container className={styles.intro}>
-		<div className="flex flex-col gap-(--size-space-extra-large-4)">
+		<div className={styles["category-list"]}>
 			{PROJECT_CATEGORIES_ANCHORS(dico).map(({ label, anchor }) =>
 				<BannerAnchor key={`anchor${label}${anchor}`} label={label} anchor={`#${anchor}`} />
 			)}

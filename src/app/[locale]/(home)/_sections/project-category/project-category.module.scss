@@ -1,17 +1,22 @@
 @use "@styles/utils" as utils;
 @use "@styles/var";
+@use "@styles/responsive" as responsive;
 
 .project-category{
 
     aspect-ratio:16/7;
     height:auto;
 
-    padding-top: var(--size-space-extra-large-6);
-    padding-bottom: var(--size-space-extra-large-6);
+    --padding-v: var(--size-space-extra-large-6);
+    padding-top: var(--padding-v);
+    padding-bottom: var(--padding-v);
 
-    margin-top: var(--size-space-extra-large-6);
-    margin-bottom: var(--size-space-extra-large-6);
+    margin-top: utils.fluid-clamp(responsive.$smallscreen, responsive.$widescreen, 0px, 96px); //var(--size-space-extra-large-6)
+    margin-bottom: utils.fluid-clamp(responsive.$smallscreen, responsive.$widescreen, 0px, 96px);
 
+    @include responsive.mobile{
+	--padding-v: var(--size-space-extra-large-2);
+    }
 }
 
 .mosaic{
@@ -25,11 +30,39 @@
 }
 
 .project-wrapper{
-   // TODO OPTI: replace hardcoded widths by dynamic (var)
-    padding-left: utils.fluid-clamp(768px, 1440px, 0px, 228px);
 
+    --desktop-ratio: 500 / 437;
+    --desktop-ratio-wide: 1120 / 437;
+   // TODO OPTI: replace hardcoded widths by dynamic (var)
+    padding-left: utils.fluid-clamp(responsive.$smallscreen, responsive.$widescreen, 0px, 228px);
+
+    display: flex;
+    flex-direction:row;
+    gap: var(--size-space-extra-large-2);
+    width: 100%;
+    justify-content: flex-end;
+    
+    &:has(a:nth-child(2)){
+	& > a{
+	    aspect-ratio: var(--desktop-ratio);
+	}
+    }
+
+    &:not(:has(a:nth-child(2))){
+	& > a{
+	    aspect-ratio: var(--desktop-ratio-wide);
+	}
+    }
+    
     & > a{
 	flex:1;
+	height: auto;
+    }
+
+    @include responsive.tablet{
+	flex-direction: column;
+	//--desktop-ratio: 16 / 10;
+	--desktop-ratio-wide: var(--desktop-ratio);
     }
 
 }
