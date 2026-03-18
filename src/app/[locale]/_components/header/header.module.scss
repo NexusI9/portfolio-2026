@@ -74,7 +74,7 @@
     }
 
     &-logo{
-	width:var(--size-icon-large);
+	width:var(--size-icon-medium);
 	aspect-ratio: 1;
 	height:auto;
     }
@@ -174,11 +174,6 @@
 	color: var(--color-text-brand-base);
     }
 
-    &-button{
-    	font-size:1.5rem;
-    }
-
-
     &-bars{
 
             align-self: flex-end;
@@ -188,6 +183,9 @@
             position: relative;
             transition: margin, 0.3s ease-out;
             cursor: pointer;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
 
             &:not(.active):hover {
                 .mmenu-mobile-bars-default span {
@@ -205,6 +203,8 @@
             }
 
             &-default {
+		
+		width:100%;
                 span {
                     &:last-of-type {
                         margin-top: var(--size-space-large);
@@ -219,7 +219,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
+		position: absolute;
+		width:100%;
+		
                 span {
                     position: absolute;
                     width: 0;

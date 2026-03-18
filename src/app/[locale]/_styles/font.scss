@@ -161,18 +161,31 @@ p{
 	    letter-spacing: var(--font-letter-spacing-label);
 	    font-size: var(--font-size-label-large);
 	    font-weight: var(--font-weight-medium);
+
+	    @include responsive.mobile{
+		font-size: var(--font-size-label-large-mobile);		
+	    }
 	}
 
 	&-medium{
 	    text-box-trim: trim-both;
 	    font-size: var(--font-size-label-medium);
 	    font-weight: var(--font-weight-medium);
+
+	    
+	    @include responsive.mobile{
+		font-size: var(--font-size-label-medium-mobile);		
+	    }
 	}
 	
 	&-small{
 	    text-box-trim: trim-both;
 	    font-size: var(--font-size-label-small);
 	    font-weight: var(--font-weight-medium);
+	    
+	    @include responsive.mobile{
+		font-size: var(--font-size-label-small-mobile);		
+	    }
 	}
     }
 }

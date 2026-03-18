@@ -61,7 +61,6 @@ export default function MobileHeader() {
 							size="LARGE"
 							role="PRIMARY"
 							style="GHOST"
-							className={styles["mobile-menu-button"]}
 							href={`/${locale}#${anchor}`}
 							onClick={() => setOpen(false)}>
 							{label}
@@ -71,10 +70,10 @@ export default function MobileHeader() {
 				<hr />
 				<div className={styles["mobile-menu-section"]}>
 					<Text.Overline className={styles["mobile-menu-overline"]}>Resources</Text.Overline>
-					<Button size="LARGE" role="PRIMARY" style="GHOST" className={styles["mobile-menu-button"]}>
+					<Button size="LARGE" role="PRIMARY" style="GHOST">
 						{dico.common.header.resume}
 					</Button>
-					<Button size="LARGE" role="PRIMARY" style="GHOST" className={styles["mobile-menu-button"]} href="mailto:nassim.elkhantour@gmail.com">
+					<Button size="LARGE" role="PRIMARY" style="GHOST" href="mailto:nassim.elkhantour@gmail.com">
 						{dico.common.header.contact}
 					</Button>
 				</div>
