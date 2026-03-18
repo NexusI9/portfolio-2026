@@ -129,6 +129,15 @@ export default function EmotionalMapper() {
 			<Blog.Group>
 				<Gallery.Wrapper>
 					<Blog.Heading role="H4">{p.tech_research.engines.headline}</Blog.Heading>
+
+					<Blog.Group direction="ROW">
+						<Blog.Paragraph>{p.tech_research.engines.challenge}</Blog.Paragraph>
+
+						<Gallery.Row>
+							<Gallery.Image src={imPath(pName, "engine-glue")} />
+						</Gallery.Row>
+
+					</Blog.Group>
 					<Blog.Paragraph>{p.tech_research.engines.body}</Blog.Paragraph>
 					<List.Root>{p.tech_research.engines.list.map(item => <List.Item key={item}>{item}</List.Item>)}</List.Root>
 
@@ -136,14 +145,6 @@ export default function EmotionalMapper() {
 						<Gallery.Image src={imPath(pName, "engine")} />
 					</Gallery.Row>
 
-					<Blog.Group direction="ROW">
-						<Blog.Paragraph>{p.tech_research.engines.end}</Blog.Paragraph>
-
-						<Gallery.Row>
-							<Gallery.Image src={imPath(pName, "engine-glue")} />
-						</Gallery.Row>
-
-					</Blog.Group>
 				</Gallery.Wrapper>
 			</Blog.Group>
 

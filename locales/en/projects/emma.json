@@ -63,13 +63,19 @@
 		},
 		"engines": {
 			"headline": "Motivational Engines",
-			"body": "To ensure the project met its goals and remained flexible across different contexts, we created a clear distinction between the project functionalities (the exposed user interface) and the underlying drivers that connect these functionalities to create an engaging, holistic user experience. We defined three core engines:",
+			"challenge": [
+				"We gathered features from previous projects as a base for our gamification framework, but quickly realized they existed as isolated islands rather than a cohesive journey. The challenge became how to connect them into something meaningful, and how to encourage users to explore beyond their comfort zone.",
+				"This led us to look for a more modular and adaptable system, one that could fit different projects, features, and personas."
+			],
+			"body": [
+				"Hence, to ensure the project met its goals and remained flexible across different contexts, we created a clear distinction between the project functionalities (the exposed user interface) and the underlying drivers that connect these functionalities to create an engaging, holistic user experience.",
+				"We defined three core engines:"
+			],
 			"list": [
 				"Motivation: engage users through extrinsic rewards",
 				"Emotional: engage users through personal engagement",
 				"Social: engage users through social belonging"
-			],
-			"end": "By dividing decision drivers into distinct goals, we ensure a more targeted and balanced approach to the mechanics."
+			]
 		},
 		"system_design": {
 			"headline": "System Design Hierarchy",
@@ -104,7 +110,10 @@
 	},
 	"software_architecture": {
 		"headline": "Software Architecture",
-		"body": "Once the formulas were set, it became intuitive to define the key software functionalities needed to model our projections through user flow.",
+		"body": [
+			"As our strategy became clearer and we better understood how to translate modules into a modular system, we still lacked a way to anticipate how user flows would impact emotions.",
+			"To address this, it felt meaningful to develop a userflow tool capable of displaying analysis metrics per frame. As part of this R&D phase, it also opened the door to experiment with system architecture inspired by a Data-Oriented Design approach."
+		],
 		"optimizations": {
 			"headline": "Performance Optimization Designs"
 		},

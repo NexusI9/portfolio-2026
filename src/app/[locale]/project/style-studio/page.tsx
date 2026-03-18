@@ -65,15 +65,25 @@ export default function StyleStudio() {
 
 
 			<Blog.Group>
-				<Blog.Heading role="H4">{p.ui_research.layouts.headline}</Blog.Heading>
-				<Blog.Paragraph>{p.ui_research.layouts.body}</Blog.Paragraph>
-				<Gallery.AutoLayout
-					rows={[
-						[
-							imPath(pName, "ui-1"),
-							imPath(pName, "ui-2"),
-						],
-					]} />
+
+				<Gallery.Wrapper>
+					<Blog.Heading role="H4">{p.ui_research.layouts.headline}</Blog.Heading>
+					<Blog.Group direction="ROW">
+						<Blog.Paragraph>{p.ui_research.layouts.body}</Blog.Paragraph>
+						<Gallery.AutoLayout noWrapper
+							rows={[
+								[
+									imPath(pName, "ui-1"),
+								],
+							]} />
+					</Blog.Group>
+					<Gallery.AutoLayout noWrapper
+						rows={[
+							[
+								imPath(pName, "ui-2"),
+							],
+						]} />
+				</Gallery.Wrapper>
 			</Blog.Group>
 
 			<Blog.Group>
@@ -123,19 +133,29 @@ export default function StyleStudio() {
 			<Blog.Heading>{p.tech_research.headline}</Blog.Heading>
 
 			<Blog.Group>
-				<Blog.Heading role="H4">{p.tech_research.ownership.headline}</Blog.Heading>
-				<Blog.Paragraph>{p.tech_research.ownership.body}</Blog.Paragraph>
-				<Gallery.AutoLayout
-					rows={[
-						[
-							imPath(pName, "server"),
-							imPath(pName, "ownership-1"),
-						],
-						[
-							imPath(pName, "ownership-2"),
-						],
-					]} />
+
+				<Gallery.Wrapper>
+					<Blog.Heading role="H4">{p.tech_research.ownership.headline}</Blog.Heading>
+
+					<Blog.Group direction="ROW">
+						<Blog.Paragraph>{p.tech_research.ownership.body}</Blog.Paragraph>
+						<Gallery.AutoLayout noWrapper
+							rows={[
+								[
+									imPath(pName, "server"),
+								]
+							]} />
+					</Blog.Group>
+
+					<Gallery.AutoLayout noWrapper
+						rows={[
+							[
+								imPath(pName, "ownership-2"),
+							],
+						]} />
+				</Gallery.Wrapper>
 			</Blog.Group>
+
 
 			<Blog.Group>
 				<Blog.Heading role="H4">{p.tech_research.sync.headline}</Blog.Heading>

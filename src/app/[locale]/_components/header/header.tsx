@@ -1,7 +1,6 @@
 "use client"
 
-import { useDictionary } from "@/i18n/Context";
-import { BaseSyntheticEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { TABLET_WIDTH } from "../../_lib/constants";
 import DesktopHeader from "./desktop";
 import MobileHeader from "./mobile";

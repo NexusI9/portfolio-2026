@@ -13,7 +13,7 @@ interface TocProps {
 
 function TocList({ nodes, maxLevel }: { nodes: any[]; maxLevel?: number }) {
 	return (
-		<ul className="pl-(--size-space-extra-large-2)">
+	  <ul className="pl-(--size-space-extra-large-2) flex flex-col gap-(--size-space-small)">
 			{nodes.map((node, i) => {
 				if (maxLevel && node.level > maxLevel) return null;
 

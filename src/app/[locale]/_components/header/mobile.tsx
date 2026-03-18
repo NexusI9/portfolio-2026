@@ -4,10 +4,19 @@ import { useState } from "react";
 import Logo from "@assets/icons/solid/nek-logo.svg";
 import LocaleSelector from "./locale-selector";
 import styles from "./header.module.scss";
+import { useDictionary } from "@/i18n/Context";
+import { useParams } from "next/navigation";
+import { Button } from "../button/button";
+import Link from "next/link";
+import { PROJECT_CATEGORIES_ANCHORS } from "../../_lib/constants";
+import { Text } from "../text/text";
 
 export default function MobileHeader() {
 
 	const [open, setOpen] = useState(false)
+	const dico = useDictionary();
+	const params = useParams();
+	const { locale } = params;
 
 	function toggleMenu() {
 		setOpen(!open)
@@ -18,19 +27,23 @@ export default function MobileHeader() {
 
 			<div className={styles["mobile-menu-bar"]}>
 
-				<Logo className={styles["mobile-menu-logo"]} />
+				<Link href={`/${locale}`}>
+					<Logo className={styles["mobile-menu-logo"]} />
+				</Link>
 
 				<div className={styles["mobile-menu-actions"]}>
 
 					{open && <LocaleSelector />}
 
-					<button
-						className={styles["mobile-menu-toggle"]}
-						onClick={toggleMenu}
-						aria-label="menu"
-					>
-						<span />
-						<span />
+					<button className={styles["mobile-menu-bars"]} onClick={toggleMenu} aria-label="menu">
+						<div className={styles["mobile-menu-bars-default"]}>
+							<span></span>
+							<span></span>
+						</div>
+						<div className={styles["mobile-menu-bars-close"]}>
+							<span></span>
+							<span></span>
+						</div>
 					</button>
 
 				</div>
@@ -40,15 +53,30 @@ export default function MobileHeader() {
 
 			<nav className={styles["mobile-menu-panel"]}>
 
-				<div className={[styles["mobile-menu-section"], styles["mobile-menu-categories"]].join(" ")}>
-					<a href="#">Category 1</a>
-					<a href="#">Category 2</a>
-					<a href="#">Category 3</a>
-				</div>
+				<div className={styles["mobile-menu-section"]}>
+					<Text.Overline className={styles["mobile-menu-overline"]}>Project Categories</Text.Overline>
+					{PROJECT_CATEGORIES_ANCHORS(dico).map(({ label, anchor }) =>
+						<Button
+							key={`anchor${label}${anchor}`}
+							size="LARGE"
+							role="PRIMARY"
+							style="GHOST"
+							className={styles["mobile-menu-button"]}
+							href={`/${locale}#${anchor}`}
+							onClick={() => setOpen(false)}>
+							{label}
+						</Button>)}
 
-				<div className={[styles["mobile-menu-section"], styles["mobile-menu-secondary"]].join(" ")}>
-					<a href="#">Resume</a>
-					<a href="#">Contact</a>
+				</div>
+				<hr />
+				<div className={styles["mobile-menu-section"]}>
+					<Text.Overline className={styles["mobile-menu-overline"]}>Resources</Text.Overline>
+					<Button size="LARGE" role="PRIMARY" style="GHOST" className={styles["mobile-menu-button"]}>
+						{dico.common.header.resume}
+					</Button>
+					<Button size="LARGE" role="PRIMARY" style="GHOST" className={styles["mobile-menu-button"]} href="mailto:nassim.elkhantour@gmail.com">
+						{dico.common.header.contact}
+					</Button>
 				</div>
 
 			</nav>
