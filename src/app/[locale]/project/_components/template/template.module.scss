@@ -1,5 +1,6 @@
+@use "@styles/responsive" as responsive;
+
 .container{
-        box-shadow: 0 25px 55px var(--color-surface-low);
 	position:relative;
 	background: var(--color-surface-higher);
 	margin-top: var(--project-banner-height);
@@ -7,9 +8,20 @@
 	display:flex;
 	flex-direction:row;
 
+	@include responsive.tablet{
+	    padding-left: 0;
+	    display: block;
+	}
 
 	&[data-type=FLUID]{
-	    	padding-top: var(--size-space-extra-large-5);
-	    	padding-left: var(--size-margin-desktop);
+
+	    --padding-left: var(--size-margin-container);
+	    padding-top: var(--size-space-extra-large-5);
+	    padding-left: var(--padding-left);
+
+	    @include responsive.tablet{
+		--padding-left: 0;
+		display: block;
+	    }
 	}
 }

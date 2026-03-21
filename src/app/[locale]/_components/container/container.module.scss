@@ -6,7 +6,7 @@
     width:100vw;
     margin: auto;
     max-width: var(--size-width-desktop-full);
-    padding: 0 var(--size-margin-desktop);
+    padding: 0 var(--size-margin-container);
 
     @include responsive.tablet{
 	padding: 0 var(--size-margin-tablet);

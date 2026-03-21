@@ -1,12 +1,32 @@
+@use "@styles/responsive" as responsive;
+
 .tradeoffs{
+
     padding-bottom: var(--size-space-extra-large-3);    
     padding-left :var(--size-margin-blog);
-    padding-right: var(--size-margin-desktop);
+    padding-right: var(--size-margin-container);
+}
+
+.header{
+    display: flex; flex-direction:row; flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: var(--size-margin-container);
+    padding-left: var(--size-margin-blog);
+    column-gap: var(--size-space-extra-large-2);
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-space-large);
 }
 
 .wrapper{
     position: relative;    
     &::after{
+	--display: block;
 	content: '';
 	position: absolute;
 	width:var(--size-margin-blog);
@@ -14,7 +34,15 @@
 	top:0;
 	left:0;
 	background: linear-gradient(90deg, var(--color-surface-higher) 80%, transparent);
-	display: block;
+	display: var(--display);
+
+	@include responsive.tablet{
+	    --display:none;
+	}
+	
+	@include responsive.mobile{
+	    --display:none;	
+	}
     }
     
 }

@@ -48,3 +48,19 @@ $widescreen: 1440px; //var(--size-width-desktop-full);
     @content;
   }
 }
+
+:root{
+
+    --size-margin-container: var(--size-margin-desktop);
+    
+    @include tablet{
+	--size-margin-blog: var(--size-margin-tablet);
+	--size-margin-container: var(--size-margin-tablet);
+    }
+    @include mobile{
+	--size-margin-blog: var(--size-margin-mobile);
+	--size-margin-container: var(--size-margin-mobile);
+    }
+
+
+}

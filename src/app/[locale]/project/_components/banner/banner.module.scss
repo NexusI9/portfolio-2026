@@ -1,7 +1,22 @@
 @use "@styles/var";
+@use "@styles/responsive" as responsive;
+@use "@styles/utils" as utils;
+
 
 :root{
     --project-banner-height:600px;
+
+    @include responsive.smallscreen{
+	--project-banner-height:0px;	
+    }
+
+    @include responsive.tablet{
+	--project-banner-height:0px;	
+    }
+	
+    @include responsive.mobile{
+	--project-banner-height:0px;	
+    }
 }
 
 .banner{
@@ -9,10 +24,38 @@
     height: var(--project-banner-height);
     padding-top: var(--size-space-extra-large-7);
     display: grid;
-    grid-template-columns: auto 545px;
+    background: linear-gradient(0deg, var(--color-surface-lower) -20%, transparent 3%);
+
+    grid-template-columns: auto utils.fluid-clamp(responsive.$tablet, responsive.$widescreen, 300px, 545px);
     align-items: start;
-    gap: var(--size-space-extra-large-6);
+    gap: utils.fluid-clamp(responsive.$smallscreen, responsive.$widescreen, 12px, 96px);
     position:fixed;
     top:0;
+
+    @mixin relative-mode(){
+	position:relative;
+	height:fit-content;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--size-space-extra-large-4);
+	align-items: center;
+	padding-bottom: var(--size-space-extra-large-5);
+    }
+
+    @include responsive.smallscreen{
+	@include relative-mode();
+    }
+    
+
+    @include responsive.tablet{
+	@include relative-mode();
+    }
+        
+    
+    @include responsive.mobile{
+	@include relative-mode();
+	padding-top: var(--size-space-extra-large-6);
+    }
 }
 

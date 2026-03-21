@@ -17,9 +17,9 @@ export default function TradeOffs({ headline, items }: ITradeoffs) {
 	return (
 		<Section type="FLUID">
 			<Slider.Root>
-				<hgroup className="flex flex-row justify-between items-center pr-(--size-margin-desktop) pl-(--size-margin-blog)">
+				<hgroup className={styles.header}>
 					<Blog.Heading role="H3">{headline}</Blog.Heading>
-					<div className="flex flex-row gap-(--size-space-large)">
+					<div className={styles.nav}>
 						<Slider.ButtonLeft />
 						<Slider.ButtonRight />
 					</div>

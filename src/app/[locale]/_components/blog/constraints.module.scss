@@ -1,3 +1,5 @@
+@use "@styles/responsive" as responsive;
+
 .constraint-cards{
     --gap: var(--size-space-extra-large-2);
     display: flex;
@@ -7,6 +9,18 @@
     gap: var(--gap);
     
     & > li{
-	flex-basis: calc((100% - 2 * var(--gap)) / 3);
+
+	--flex-basis: calc((100% - 2 * var(--gap)) / 3);
+	flex-basis: var(--flex-basis);
+	flex-grow: 1;
+
+	@include responsive.tablet{
+	    --flex-basis: calc((100% - 2 * var(--gap)) / 2);
+	}
+
+	@include responsive.mobile{
+	    --flex-basis: 1;
+	}
     }
+
 }
