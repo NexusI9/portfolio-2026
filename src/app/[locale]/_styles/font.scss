@@ -163,7 +163,7 @@ p{
 	    font-weight: var(--font-weight-medium);
 
 	    @include responsive.mobile{
-		font-size: var(--font-size-label-large-mobile);		
+		//font-size: var(--font-size-label-large-mobile);		
 	    }
 	}
 
@@ -174,7 +174,7 @@ p{
 
 	    
 	    @include responsive.mobile{
-		font-size: var(--font-size-label-medium-mobile);		
+		//font-size: var(--font-size-label-medium-mobile);		
 	    }
 	}
 	
@@ -184,7 +184,7 @@ p{
 	    font-weight: var(--font-weight-medium);
 	    
 	    @include responsive.mobile{
-		font-size: var(--font-size-label-small-mobile);		
+		//font-size: var(--font-size-label-small-mobile);		
 	    }
 	}
     }

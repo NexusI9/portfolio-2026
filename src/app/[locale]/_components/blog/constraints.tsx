@@ -14,9 +14,11 @@ export default function Constraints({ headline, items }: IConstraints) {
 
 	return (
 		<Blog.Section>
-			<Blog.Heading role="H3">{headline}</Blog.Heading>
-			<ul className={styles["constraint-cards"]}>
-				{items.map((item, i) => <ConstraintCard key={item + i} label={item} number={i + 1} />)}
-			</ul>
+			<Blog.Group>
+				<Blog.Heading role="H3">{headline}</Blog.Heading>
+				<ul className={styles["constraint-cards"]}>
+					{items.map((item, i) => <ConstraintCard key={item + i} label={item} number={i + 1} />)}
+				</ul>
+			</Blog.Group>
 		</Blog.Section>);
 }

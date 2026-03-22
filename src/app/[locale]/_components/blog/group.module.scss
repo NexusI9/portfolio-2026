@@ -5,8 +5,13 @@
     flex-direction: column;
 
     &[data-direction=ROW]{
-	display:grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	flex-direction:row;
+	flex-wrap: wrap;
+	& > *{
+	    flex:1;
+	    min-width: 350px;
+	}
+	
     }
     
 }

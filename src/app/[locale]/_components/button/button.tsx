@@ -19,14 +19,15 @@ interface IButton {
 	onClick?: (e: BaseSyntheticEvent) => any;
 	href?: string;
 	className?: string;
+	decoration?: boolean;
 }
 
-export const Button = ({ leadingIcon, trailingIcon, size, role, style, children, className, onClick, href, type = "TEXT" }: IButton) => {
+export const Button = ({ leadingIcon, trailingIcon, size, role, style, children, className, onClick, href, type = "TEXT", decoration = true }: IButton) => {
 
 	const Wrapper = href ? Link : "div";
 
 	return (
-		<Wrapper className={catClass([styles.button, className])}
+		<Wrapper className={catClass([className, styles.button])}
 			data-size={size}
 			data-role={role}
 			data-style={style}
@@ -35,7 +36,7 @@ export const Button = ({ leadingIcon, trailingIcon, size, role, style, children,
 			role="button"
 			href={String(href)}
 		>
-			{style == "GHOST" && <Brackets className={styles.brackets} />}
+			{decoration && style == "GHOST" && <Brackets className={styles.brackets} />}
 			<Label size={size} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>{children}</Label>
 		</Wrapper >
 	);

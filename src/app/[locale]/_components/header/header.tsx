@@ -11,14 +11,14 @@ export default function Header() {
 
 	useEffect(() => {
 
-		const checkDevice = () => {
+	  const checkDevice = () => {
 			setDevice(window.innerWidth > TABLET_WIDTH ? "PC" : "TB");
 		};
 
 		checkDevice();
 		window.addEventListener("resize", checkDevice);
 
-		return window.removeEventListener("resize", checkDevice);
+	  return () => window.removeEventListener("resize", checkDevice);
 	}, []);
 
 	return (<>

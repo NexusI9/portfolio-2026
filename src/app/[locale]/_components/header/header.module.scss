@@ -50,7 +50,7 @@
     width:100vw;
     position:fixed;
     z-index:100;
-    
+    pointer-events: none;
 
     hr{
 	border-color: var(--color-border-subtle-on-light);
@@ -59,6 +59,7 @@
     /* BAR */
     
     &-bar{
+	pointer-events: none;
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
@@ -71,33 +72,16 @@
 	display:flex;
 	align-items:center;
 	gap:16px;
+	pointer-events:auto;
     }
 
     &-logo{
+	pointer-events:auto;
 	width:var(--size-icon-medium);
 	aspect-ratio: 1;
 	height:auto;
     }
     
-    /* MENU BUTTON */
-    
-    &-toggle{
-	width:28px;
-	height:20px;
-	
-	display:flex;
-	flex-direction:column;
-	justify-content:space-between;
-	
-	background:none;
-	border:none;
-    }
-    
-    &-toggle span{
-	height:2px;
-	background:black;
-	display:block;
-    }
     
     
     /* PANEL */
@@ -114,7 +98,7 @@
 	
 	background: var(--color-surface-highest);
 	
-	padding:120px 32px 48px;
+	padding:var(--size-space-extra-large-6) var(--size-margin-container) var(--size-space-extra-large-2);
 	
 	display:flex;
 	flex-direction:column;
@@ -145,7 +129,7 @@
         .mobile-menu-bars-close {
             span {
                 transition-delay: 0.3s;
-                width: 70%;
+                width: 100%;
             }
         }
             
@@ -177,7 +161,7 @@
     &-bars{
 
             align-self: flex-end;
-            width: 40px;
+            width: var(--size-icon-medium);
 	    aspect-ratio:1;
 	    height:auto;
             position: relative;
@@ -207,8 +191,8 @@
 		width:100%;
                 span {
                     &:last-of-type {
-                        margin-top: var(--size-space-large);
-                        width: 70%;
+                        margin-top: var(--size-space-medium);
+                        width: 100%;
                         margin-right: 0;
                         float: right;
                     }

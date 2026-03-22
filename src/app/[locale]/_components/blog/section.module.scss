@@ -1,9 +1,10 @@
 @use "@styles/responsive" as responsive;
+@use "@styles/utils" as utils;
 
 .blog-section{
-    
-    padding-bottom:var(--size-space-extra-large-6);
-    display:flex;
+
+    // TODO replace hardcoded value:  96 >> --size-space-extra-large-6
+    padding-bottom:utils.fluid-clamp(responsive.$tablet, responsive.$widescreen, 32px, 96px);    display:flex;
     flex-direction: column;
     gap:var(--size-space-extra-large-4);
     padding-right: var(--size-margin-container);
